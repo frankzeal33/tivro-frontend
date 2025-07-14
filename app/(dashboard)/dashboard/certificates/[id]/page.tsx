@@ -92,7 +92,7 @@ const Page = () => {
                             Back
                         </Link>
                         <h2 className='font-bold text-2xl'>Issued certificate</h2>
-                        <p className='text-muted-foreground'>{verification?.Bio_data?.["created date"] ? format(new Date(verification?.Bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                        <p className='text-muted-foreground'>{verification?.Bio_data?.created_date ? format(new Date(verification?.Bio_data?.created_date), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
                     </div>
                     <Button className='w-fit' onClick={generatePdf}>
                         <BsFillLightningChargeFill size={26} className="text-primary-foreground"/>
@@ -110,7 +110,7 @@ const Page = () => {
                                         <AvatarFallback className='text-4xl'>{`${verification?.Bio_data?.first_name[0] ?? ''}${verification?.Bio_data?.last_name[0] ?? ''}`.toUpperCase()}</AvatarFallback>
                                     </Avatar>
                                     <div className='flex flex-col items-center gap-2'>
-                                        <p className="text-2xl font-medium leading-none">{verification?.Bio_data?.first_name} {verification?.Bio_data?.last_name}</p>
+                                        <p className="text-2xl font-medium leading-none text-center">{verification?.Bio_data?.first_name} {verification?.Bio_data?.last_name}</p>
                                         <div className='flex items-center flex-wrap justify-center gap-1'>
                                             <p className="text-base text-center text-muted-foreground">Certificate of verification presented by</p>
                                             <div className="flex items-center">
@@ -149,7 +149,7 @@ const Page = () => {
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Date issued</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.["created date"] ? format(new Date(verification?.Bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.created_date ? format(new Date(verification?.Bio_data?.created_date), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@ const Page = () => {
                                     <AccordionContent>
                                         <div className='space-y-2 py-4'>
                                             <div className='md:flex gap-2 items-center justify-between'>
-                                                <p className="text-sm text-muted-foreground">No data indicating  non-payment.</p>
+                                                <p className="text-sm text-muted-foreground">{verification?.credit_check?.score_card}</p>
                                             </div>
                                             <div className='md:flex gap-2 items-center justify-between'>
                                                 <p className="text-sm text-muted-foreground">Databases analysed:</p>
@@ -218,8 +218,8 @@ const Page = () => {
                                                 <p className="text-sm font-medium leading-none">{verification?.work_place?.line_manager_check}</p>
                                             </div>
                                             <div className='md:flex gap-2 items-center justify-between'>
-                                                <p className="text-sm text-muted-foreground">Identification Card and Income check</p>
-                                                <p className="text-sm font-medium leading-none">{verification?.work_place?.line_manager_check}</p>
+                                                <p className="text-sm text-muted-foreground">Work Place Status</p>
+                                                <p className="text-sm font-medium leading-none">{verification?.work_place?.work_place_status}</p>
                                             </div>
                                         </div>
                                     </AccordionContent>

@@ -89,7 +89,7 @@ const Page = () => {
       if(response.data?.status === 500){
         toast.error(response.data?.message)
         if(response.data?.message === "You have filled the form, kindly check your certificate"){
-          router.push("/tenant/certificate")
+          router.push(`/tenant/certificate/${token}`)
         }
       }else{
         tenantInfo(response.data)

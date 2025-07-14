@@ -33,7 +33,7 @@ import { DownloadStatus } from '@/components/DownloadStatus'
 const Page = () => {
 
     const params = useParams();
-    const id = params?.id;
+    const token = params?.token;
     const [loadingInfo, setLoadingInfo] = useState(false)
     const [verification, setVerification] = useState<any>()
      const arrayList = new Array(2).fill(null)
@@ -44,7 +44,7 @@ const Page = () => {
     
           setLoadingInfo(true)
           
-          const response = await axiosClient.get(`/user/certificate/?id=${id}`)
+          const response = await axiosClient.get(`/cert/tenant/?token=${token}`)
           setVerification(response.data || {})
     
         } catch (error: any) {
@@ -56,7 +56,7 @@ const Page = () => {
 
     useEffect(() => {
         getCert()
-    }, [id])
+    }, [token])
 
     const generatePdf = () => {
         const input = document.getElementById('certificate') as HTMLElement | null;
@@ -69,7 +69,7 @@ const Page = () => {
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
             const timestamp = Date.now();
-            pdf.save(`${verification?.Bio_data?.first_name}-${verification?.Bio_data?.last_name}-${timestamp}.pdf`);
+            pdf.save(`${verification?.bio_data?.first_name}-${verification?.bio_data?.last_name}-${timestamp}.pdf`);
 
         });
     };
@@ -88,7 +88,7 @@ const Page = () => {
                 <div  className='flex flex-col md:flex-row md:items-end justify-between gap-4'>
                     <div>
                         <h2 className='font-bold text-2xl'>Issued certificate</h2>
-                        <p className='text-muted-foreground'>{verification?.Bio_data?.["created date"] ? format(new Date(verification?.Bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                        <p className='text-muted-foreground'>{verification?.bio_data?.created_date ? format(new Date(verification?.bio_data?.created_date), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
                     </div>
                     <Button className='w-fit' onClick={generatePdf}>
                         <BsFillLightningChargeFill size={26} className="text-primary-foreground"/>
@@ -103,10 +103,10 @@ const Page = () => {
                                 <div className='flex flex-col gap-4 items-center justify-center'>
                                     <Avatar className='size-32'>
                                         <AvatarImage src={'/next-assets/photo.png'} alt="TV" />
-                                        <AvatarFallback className='text-4xl'>{`${verification?.Bio_data?.first_name[0] ?? ''}${verification?.Bio_data?.last_name[0] ?? ''}`.toUpperCase()}</AvatarFallback>
+                                        <AvatarFallback className='text-4xl'>{`${verification?.bio_data?.first_name[0] ?? ''}${verification?.bio_data?.last_name[0] ?? ''}`.toUpperCase()}</AvatarFallback>
                                     </Avatar>
                                     <div className='flex flex-col items-center gap-2'>
-                                        <p className="text-2xl font-medium leading-none">{verification?.Bio_data?.first_name} {verification?.Bio_data?.last_name}</p>
+                                        <p className="text-2xl font-medium leading-none text-center">{verification?.bio_data?.first_name} {verification?.bio_data?.last_name}</p>
                                         <div className='flex items-center flex-wrap justify-center gap-1'>
                                             <p className="text-base text-center text-muted-foreground">Certificate of verification presented by</p>
                                             <div className="flex items-center">
@@ -125,27 +125,27 @@ const Page = () => {
                                     <div className='grid md:grid-cols-2 gap-4'>
                                         <div>
                                             <p className="text-sm font-medium leading-none">First name</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.first_name}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.first_name}</p>
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Last name</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.last_name}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.last_name}</p>
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Email</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.email}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.email}</p>
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Phone No</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.phone}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.phone}</p>
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Address</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.address}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.address}</p>
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Date issued</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.Bio_data?.["created date"] ? format(new Date(verification?.Bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.["created date"] ? format(new Date(verification?.bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@ const Page = () => {
                                     <AccordionTrigger className='border-b rounded-none hover:no-underline'>
                                         <div className='flex items-center gap-2'>
                                             <p className="text-lg font-medium leading-none">Identity check</p>
-                                            <DownloadStatus status={verification?.identity_verification?.Identity_check} otherStyles='text-sm'/>
+                                            <DownloadStatus status={verification?.identity_verification?.identity_check} otherStyles='text-sm'/>
                                         </div>
                                     </AccordionTrigger>
                                     <AccordionContent>
@@ -191,7 +191,7 @@ const Page = () => {
                                     <AccordionContent>
                                         <div className='space-y-2 py-4'>
                                             <div className='md:flex gap-2 items-center justify-between'>
-                                                <p className="text-sm text-muted-foreground">No data indicating  non-payment.</p>
+                                                <p className="text-sm text-muted-foreground">{verification?.credit_check?.credit_review}</p>
                                             </div>
                                             <div className='md:flex gap-2 items-center justify-between'>
                                                 <p className="text-sm text-muted-foreground">Databases analysed:</p>
@@ -214,8 +214,8 @@ const Page = () => {
                                                 <p className="text-sm font-medium leading-none">{verification?.work_place?.line_manager_check}</p>
                                             </div>
                                             <div className='md:flex gap-2 items-center justify-between'>
-                                                <p className="text-sm text-muted-foreground">Identification Card and Income check</p>
-                                                <p className="text-sm font-medium leading-none">{verification?.work_place?.line_manager_check}</p>
+                                                <p className="text-sm text-muted-foreground">Work Place Status</p>
+                                                <p className="text-sm font-medium leading-none">{verification?.work_place?.work_place_status}</p>
                                             </div>
                                         </div>
                                     </AccordionContent>
