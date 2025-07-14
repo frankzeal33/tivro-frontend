@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Management Software for Landlords and Tenants in Africa – Tivro</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="preload" as="image" href="images/hero-image.webp" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="canonical" href="https://tivro.africa" />
+    <meta name="description" content="Your trustworthy partner in rental verification, effortlessly verifying tenants or properties to ensure peace of mind and empower confident, informed decisions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="Tivro" />
+    <meta property="og:title" content="Rental Management Software for Landlords and Tenants in Africa – Tivro" />
+    <meta property="og:description" content="Your trustworthy partner in rental verification, effortlessly verifying tenants or properties to ensure peace of mind and empower confident, informed decisions." />
+    <meta property="og:url" content="https://tivro.africa" />
+    <meta property="og:image" content="https:tivro.africa/hero-image.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rental Management Software for Landlords and Tenants in Africa – Tivro" />
+    <meta name="twitter:description" content="Your trustworthy partner in rental verification, effortlessly verifying tenants or properties to ensure peace of mind and empower confident, informed decisions." />
+    <meta name="twitter:image" content="https://tivro.africa/hero-image.webp" />
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Tivro",
+          "url": "https://tivro.africa",
+          "logo": "https://tivro.africa/images/logo-black.svg",
+          "sameAs": [
+            "https://www.facebook.com/people/Tivro-Africa/61571922944686/",
+            "https://x.com/UseTivroAfrica",
+            "https://www.instagram.com/tivroafrica/",
+            "https://www.linkedin.com/company/tivro-africa/",
+            "https://www.tiktok.com/@tivroafrica"
+          ]
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="header-container">
+        <!-- Header/Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container px-4">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" alt="Tivro Logo"> </a>
+                <div class="d-lg-none">
+                    <img src="images/icons/menu-open.svg" width="35" height="35" data-bs-toggle="modal"
+                        data-bs-target="#mobileMenuModal" class="menu-open " style="cursor: pointer;">
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">About Tivro</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li class="nav-item"><a class="dropdown-item nav-link text-black"
+                                        href="tivinspect.html">TivInspect</a></li>
+                                <li class="nav-item"><a class="dropdown-item nav-link text-black"
+                                        href="tivgent.html">TivGent</a>
+                                </li>
+                                <li class="nav-item"><a class="dropdown-item nav-link text-black "
+                                        href="tivro-ai.html">Tivro AI</a></li>
+                            </ul>
+                        </li>
+                        <a class="nav-link text-white" href="careers.html">Careers</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-white" href="partners.html">Tivro Partners</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-white" href="tivro-ai.html">Tivro AI</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="nav-buttons d-flex gap-3">
+                        <a href="/login"
+                            class="btn btn-link text-white">Login</a>
+                        <a href="/register" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div id="loading-bar" class="position-fixed top-0 start-0 bg-primary"
+                style="height: 4px; width: 0%; z-index: 1050;"></div>
+        </nav>
+
+    </div>
+
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="background: url('images/hero-image.webp') center/cover no-repeat;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container px-4 position-relative">
+                    <div class="row align-items-center">
+                        <div class="col-lg-10 mx-auto text-center text-white">
+                            <div class="hero-tag">
+                                <span class="badge hero-badge rounded-4 px-3 py-2  bg-primary">Easy</span>
+                                <span class="text-white ms-2 fw-normal">Verify Tenants, Secure Homes</span>
+                            </div>
+
+                            <h1 class="display-4 fw-bold mt-4 mb-4">
+                                Renting Made Easy for Landlords<br> and Tenants in <span
+                                    class="text-primary new-times-roman">Africa</span>
+                            </h1>
+                            <p class="mb-5">
+                                Your trustworthy partner in rental verification, effortlessly verifying tenants or
+                                properties to
+                                ensure peace of mind and empower confident, informed decisions.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="/register"
+                                    class="btn btn-primary btn-lg me-3">Get Started</a>
+                                <a href="#how-tivro-works" class="btn btn-outline-light btn-lg">Learn More <i
+                                        class="fas fa-arrow-up-right-from-square ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-md-5 py-4 my-md-5 my-4">
+            <div class="container px-4 text-center">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">RECORDS</span>
+
+                <h2 class="  text-center mb-2 header-text-color fw-bold" data-aos="fade-up">Tivro is closer than you
+                    think
+                </h2>
+                <p class="mb-5 text-center text-black" data-aos="fade-up">
+                    Delivering secure and reliable verification solutions across cities
+                    in Africa and beyond.
+                </p>
+                <div class="row text-center">
+                    <div class="col-12 col-sm-6 col-md-6  col-lg-3" data-aos="fade-up">
+                        <div class="stat-item d-flex flex-column d-flex flex-column">
+                            <h2 class="header-text-color counter-number" data-target="45">0</h2>
+                            <p class="counter-title">Active Users</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6  col-lg-3" data-aos="fade-up">
+                        <div class="stat-item d-flex flex-column ">
+                            <h2 class="header-text-color counter-number" data-target="32521">0</h2>
+                            <p class="counter-title">Verified Users</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6  col-lg-3" data-aos="fade-up">
+                        <div class="stat-item d-flex flex-column">
+                            <h2 class="header-text-color counter-number" data-target="39620">0</h2>
+                            <p class="counter-title">Property Listings</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="stat-item d-flex flex-column">
+                            <h2 class="header-text-color counter-number" data-target="65312">0</h2>
+                            <p class="counter-title">Rental Agreements</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="bg-light py-md-5 py-4 my-md-5 my-4">
+            <div class="container text-center px-4 py-5">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">FEATURES</span>
+                <h2 class="text-center header-text-color mb-2 fw-bold" data-aos="fade-up">Key Tivro Features</h2>
+                <p class="mb-5 text-center col-lg-8 mx-auto" data-aos="fade-up">
+                    Tivro bridges the gap between landlords and tenants with seamless verification and trusted property
+                    inspection, ensuring secure and efficient rental process.
+                </p>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="60">
+                        <div class="card p-2 h-100 header-text-color card-home-border shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/money-bag.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title">Credit Score Assessment
+                                    </h4>
+
+                                    <span class="card-text text-content-color text-content-color">Tivro provides a
+                                        detailed credit score to assess the
+                                        financial reliability of their potential tenants.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="120">
+                        <div class="card p-2 h-100 card-home-border  shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/notification-icon.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title ">Notification System</h4>
+
+                                    <span class="card-text text-content-color">Access to an integrated in-app and email
+                                        notifications to
+                                        keep users informed always.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="180">
+                        <div class="card p-2 h-100 card-home-border  shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/certification-icon.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title ">Certificate Issuing</h4>
+
+                                    <span class="card-text text-content-color">Tivro generates a verification
+                                        certificate for each client
+                                        serving as a unique record of process.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="220">
+                        <div class="card p-2 h-100 card-home-border  shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/verification-icon.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title ">Tenants Verification</h4>
+
+
+                                    <span class="card-text text-content-color">Verification of tenants identity is done
+                                        using BVN, NIM and
+                                        CAC for reliable information in less time.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="240">
+                        <div class="card p-2 h-100 card-home-border  shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/editing-pen-icon.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title ">Property Inspection</h4>
+
+
+                                    <span class="card-text text-content-color">Tivro provides tenants with securely
+                                        inspect properties in advance through our Tivgent feature, ensuring trust and
+                                        transparency.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="280">
+                        <div class="card p-2 h-100 card-home-border  shadow-sm">
+                            <div
+                                class="card-body d-flex flex-column flex-md-row align-items-center text-center text-md-start">
+                                <!-- Icon Wrapper -->
+                                <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-3"
+                                    style="width: 70px; height: 70px;">
+                                    <img src="images/icons/certification-icon.svg" alt="Feature Icon"
+                                        style="width: 70px; height: 70px;">
+                                </div>
+                                <!-- Text Content -->
+                                <div>
+                                    <!--desktop Tile-->
+                                    <h4 class="card-title fw-semibold mb-2 why-choose-title ">Tenants Management System
+                                    </h4>
+
+
+                                    <span class="card-text text-content-color">Tivro provides property managers with a
+                                        secure way to manage tenants while ensuring trust in the rental process.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How Tivro Works Section -->
+        <section class="py-md-5 py-4 my-md-5 my-4" id="how-tivro-works">
+            <div class="container px-4 text-center p-4">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">EXCLUSIVE BENEFITS</span>
+
+                <div class="text-center mb-5">
+                    <h2 class="text-center mb-2 header-text-color fw-bold" data-aos="fade-up" data-aos-delay="60">How
+                        Tivro Works</h2>
+                    <p class=" mb-5 text-center text-black fw-normal" data-aos="fade-up" data-aos-delay="120">
+                        Quick, Easy, Reliable and Perfect for Everyone
+                    </p>
+                </div>
+                <!-- deskop tabs -->
+                <div class="d-none d-lg-block row" data-aos="fade-up" data-aos-delay="180">
+                    <div class="col-12 mb-4">
+                        <!-- Tab Buttons -->
+                        <div class="user-type-tabs">
+                            <button class="tab-btn active fw-bold" data-user-type="landlord">
+                                <img src="images/icons/home-icon.svg" alt="Feature Icon" class="me-2 landlord-icon">
+                                Tivro for Landlord's
+                            </button>
+                            <button class="tab-btn fw-bold" data-user-type="tenant">
+                                <img src="images/icons/tenants-icon.svg" alt="Feature Icon" class="me-2 tenant-icon">
+                                Tivro for Tenant's
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Content Tabs -->
+                    <div class="tab-content" id="landlordContent" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Steps Accordion -->
+                                <div class="steps-accordion">
+                                    <div class="step-item active text-start shadow-sm border-2 "
+                                        data-image="images/create-account-tab.webp">
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">1</span>
+                                                <h4 class="fw-bold text-start mb-0">Sign in or Create an Account</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+                                        <div class="step-content show">
+                                            <span>Visit the TIVRO platform. Register with your details or sign in to
+                                                your
+                                                existing account. Access the landlord dashboard to begin the
+                                                verification
+                                                process.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item text-start shadow-sm"
+                                        data-image="images/tenants-deatils-tab.webp">
+
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">2</span>
+                                                <h4 class="fw-bold text-start mb-0">Enter Property Details</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="step-content">
+                                            <span>As a landlord, start by entering your tenant's essential information,
+                                                such as
+                                                their name, contact details, and other identification data, into the
+                                                platform. This initiates the verification process, ensuring all key
+                                                information is collected.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item text-start shadow-sm"
+                                        data-image="images/tenats-cartification-tab.webp">
+
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">3</span>
+                                                <h4 class="fw-bold text-start mb-0">Review Tenants Certificate</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="step-content">
+                                            <span>After processing, a digital verification certificate is generated,
+                                                summarizing the tenant’s credibility, including financial standing and
+                                                identity confirmation. This document is available for you to review
+                                                directly
+                                                on the platform.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="process-image-container rounded-5 px-4">
+                                    <img src="images/create-account-tab.webp" alt="Process illustration"
+                                        class="img-fluid rounded-5" id="processImage">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content d-none" id="tenantContent" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="steps-accordion">
+                                    <div class="step-item active text-start shadow-sm"
+                                        data-image="images/receive-email-tab.webp">
+
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">1</span>
+                                                <h4 class="fw-bold text-start mb-0">Receive an Email from TIVRO</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="step-content show">
+                                            <span>Once a landlord enters your details, TIVRO will send you an email to
+                                                initiate
+                                                the verification process.The email will include a secure link to start
+                                                your
+                                                verification. You can start by using our platform and get familiar with
+                                                how
+                                                we operate.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item text-start shadow-sm"
+                                        data-image="images/submit-personal-tab.webp">
+
+
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">2</span>
+                                                <h4 class="fw-bold text-start mb-0">Submit Your Personal Details</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="step-content">
+                                            <span>Provide the required details, such as your BVN, NIN, and employment
+                                                information. Ensure all information is accurate for seamless processing.
+                                                Upload any necessary supporting documents securely on the
+                                                platform.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item text-start shadow-sm"
+                                        data-image="images/verification-complete-tab.webp">
+
+                                        <div class="step-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <span class="step-number me-3">3</span>
+                                                <h4 class="fw-bold text-start mb-0">Verification Complete</h4>
+                                            </div>
+                                            <span class="toggle-btn">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="step-content">
+                                            <span>TIVRO processes your details using advanced verification technology.
+                                                Receive
+                                                a notification once the verification is complete. A certificate of
+                                                verification is sent to the landlord, confirming your
+                                                credibility.</span>
+                                            <a href="/register"
+                                                class="step-link fw-normal text-primary text-decoration-none d-block mt-3">Go
+                                                to
+                                                Tivro <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="process-image-container px-4">
+                                    <img src="images/receive-email-tab.webp" alt="Process illustration"
+                                        class="img-fluid rounded-5" id="tenantProcessImage">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Mobile tab-->
+                <div class="d-md-block d-lg-none">
+                    <span class="badge badge-pill badage- bg-primary rounded-4  fw-normal text-white m-4"
+                        data-aos="fade-up">TIVRO
+                        FOR LANDLORDS</span>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">1</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">2</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">3</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="badge badge-pill badage- bg-primary rounded-4  fw-normal text-white m-4 mt-5 mb-5"
+                        data-aos="fade-up">TTIVRO
+                        FOR TENANTS</span>
+                    <div class="row g-4 ">
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">1</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">2</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="feature-card text-center d-flex flex-column align-items-center p-4 bg-white rounded-4 border border-1 border-text shadow-sm">
+                                <div class="feature-icon bg-primary d-flex justify-content-center align-items-center rounded-circle mb-3"
+                                    style="width: 70px; height: 70px;">
+                                    <span class="text-white fs-2 fw-normal">3</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h2 class="feature-card-title header-text-color fw-bold">Sign in or Create an
+                                        Account</h2>
+                                    <p class="text-muted">Visit the TIVRO platform. Register with your details or sign
+                                        in to your existing account. Access the landlord dashboard to begin the
+                                        verification process.</p>
+                                    <a href="/register"
+                                        class="step-link fw-normal text-primary text-decoration-none d-inline-flex align-items-center">
+                                        <span>Go to Tivro</span> <i class="fas fa-chevron-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="py-md-5 py-4 my-md-5 my-4">
+            <div class="container px-4 text-center p-5">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">QUOTE</span>
+                <h2 class="text-center mb-2 header-text-color fw-bold" data-aos="fade-up">What Our Users Are Saying</h2>
+                <p class=" mb-5 text-center text-black fw-normal col-lg-8 mx-auto" data-aos="fade-up">
+                    Tivro bridges the gap between landlords and tenants with seamless verification and trusted
+                    property
+                    inspection, ensuring secure and efficient rental process.
+                </p>
+                <div class="container px-0 px-sm-5">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column ">
+                                <p class="testimonial-text text-start mb-3">"Before Tivro, I had no way of knowing if a
+                                    tenant was trustworthy beyond what they told me. Now, I just invite them to get
+                                    verified, and I receive a full report. No more risks, no more stress!”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0"> Mr. Adeyemi A</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Lagos</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“I once had a tenant who faked documents to
+                                    rent my apartment. After that experience, I knew I had to do better. Tivro now helps
+                                    me verify tenants before they move in, so I don’t end up with bad renters again”
+                                </p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Mrs. Nkechi O.</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Abuja</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">"I almost paid for a house that had been
+                                    rented to someone else! With Tivro, I verified the apartment before making any
+                                    payments. This platform saved me from losing money."</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Tunde F</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Lekki</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“As a tenant, I always felt landlords didn’t
+                                    trust me. But since I got my Tivro verification, house hunting has been easier. Once
+                                    I show landlords my verified status, they know I’m legit”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Amaka E</span>
+                                        <p> <small class="text-black fw-normal text-start p-0"> Port Harcourt</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“Some tenants lie about their history, and
+                                    it’s hard to tell who is responsible. With Tivro, we now verify tenants before
+                                    offering them leases. It protects our properties and makes renting stress-free!”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Mr. Chuks I</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Enugu</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“We also use Tivro to verify apartments. I
+                                    had a case where a house was listed in terrible condition. After our report, the
+                                    landlord had to make repairs before renting it out. It’s a game-changer!”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Aisha M</span>
+                                        <p> <small
+                                                class="text-content-color h6 fw-normal text-start p-0">Maryland</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“House hunting in Nigeria can be risky. I
+                                    always tell my clients to verify apartments first. Tivro helps me protect my
+                                    reputation because I only recommend verified properties.”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Segun A</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Ikeja</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex" data-aos="fade-up">
+                            <div class="testimonial-card d-flex flex-column">
+                                <p class="testimonial-text text-start mb-3">“Landlords trust my recommendations more now
+                                    because I use Tivro’s verification for my clients. They know they’re getting a
+                                    properly vetted tenant! ”</p>
+                                <div class="testimonial-author mt-5">
+
+                                    <div class="author-details ms-1 text-start d-inline-block p-0">
+                                        <span class="header-text-color fw-semibold p-0">Faith O</span>
+                                        <p> <small class="text-content-color h6 fw-normal text-start p-0">Ibadan</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Section -->
+        <section class="bg-light py-md-5 py-0 my-md-0 my-0">
+            <div class="container px-4 text-center p-5">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">CONVICTION</span>
+                <h2 class="text-center mb-2 header-text-color fw-bold" data-aos="fade-up">Why Choose Tivro</h2>
+                <p class="mb-5 text-center text-black col-lg-8 mx-auto" data-aos="fade-up">
+                    Tivro bridges the gap between landlords and tenants with seamless verification and trusted property
+                    inspection, ensuring secure and efficient rental process.
+                </p>
+                <div class="row g-5">
+                    <div class="col-md-4 " data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/graph-up.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Trust and Reliability</h4>
+                            <span class="text-content-color">We ensure landlords rent to credible tenants. We verify
+                                every details, offering peace
+                                of
+                                mind.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/graph-up.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Simplified Verification</h4>
+                            <span class="text-content-color">We complete tenant verification and property checks
+                                quickly, ensuring you make
+                                confident
+                                decisions.</n>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/user-group-icon.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Data Management</h4>
+                            <span class="text-content-color">We complete tenant verification and property checks
+                                quickly, ensuring you make
+                                confident
+                                decisions.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/editing-pen-icon.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Fast and Transparent</h4>
+                            <span class="text-content-color">We prioritise speed and transparency in every step. All
+                                property checks and
+                                inspections
+                                are done quickly.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/grid-block-icon.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Detailed Tenant Profile</h4>
+                            <span class="text-content-color">Tenants can request property inspections before renting.
+                                Our agents verify to save
+                                time
+                                and reduce risks.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card bg-light border-0 p-4 text-center">
+                            <div class="mb-4">
+                                <img src="images/icons/gear-icon.svg" alt="Feature Icon" width="70" height="70">
+                            </div>
+                            <h4 class="fw-bold why-choose-title header-text-color">Mutual Understanding</h4>
+                            <span class="text-content-color">Our platform helps reduce misunderstandings, making the
+                                rental process
+                                smoother.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="faq-section background-light py-3 py-md-5 ">
+            <div class="container px-4 text-center p-5">
+                <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                    data-aos="fade-up">FAQ</span>
+                <h2 class="text-center mb-2 header-text-color fw-bold" data-aos="fade-up">Frequently Asked Questions
+                </h2>
+                <p class="mb-5 text-center text-content-color fw-normal" data-aos="fade-up">
+                    Tivro is here to make your life easier and foster tenant-landlord connection.
+                </p>
+                <div class="accordion col-lg-8 mx-auto py-2" id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne">
+
+                                <h5 class="accordion-title fw-bold header-text-color">What is Tivro Africa?</h5>
+                            </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-content-color text-start pt-0">
+                                    Tivro Africa is a comprehensive platform designed to serve the needs of both
+                                    property owners and tenants by providing reliable verification services. It helps
+                                    property managers, landlords, and homeowners verify the authenticity of renters and
+                                    subletters. Likewise, tenants can use Tivro Africa to verify the legitimacy and
+                                    condition of apartments or properties before signing a lease. This two-way
+                                    verification system ensures security and transparency, minimising the risks of fraud
+                                    for all involved parties.
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="accordion-header header-text-color">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo">
+                                <h5 class="accordion-title fw-bold header-text-color">How does Tivro Africa work?</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-content-color text-start pt-0">
+                                Tivro Africa operates through an efficient and thorough verification process tailored to both property owners and tenants. For property owners, Tivro Africa allows you to submit a potential tenant’s details, and our platform runs background checks on their credit history, and financial standing leveraging the use of our technological algorithms. For tenants, Tivro Africa helps ensure the property you’re interested in is legitimate by verifying the property’s legal status, the landlord's authenticity, and the property’s overall condition. This dual approach protects both tenants and landlords from fraudulent activities.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                        <h2 class="accordion-header header-text-color">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree">
+                                <h5 class="accordion-title fw-bold header-text-color"> Is Tivro Africa available in my
+                                    country?
+                                </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-content-color text-start pt-0">
+                                Tivro Africa is currently available in Nigeria, Ghana, and Kenya, with plans for
+                                expansion into additional African markets. We are committed to increasing accessibility
+                                and building trust across the rental market in Africa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <h2 class="accordion-header header-text-color">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour">
+                                <h5 class="accordion-title fw-bold header-text-color">Is Tivro Africa an app or a
+                                    website?
+                                </h5>
+
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-content-color text-start pt-0">
+                                At present, Tivro Africa operates as a web-based platform that you can access via a
+                                secure URL. While the platform is currently available as a website, we are exploring the
+                                possibility of launching a mobile app in the near future to further enhance
+                                accessibility and user experience.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                        <h2 class="accordion-header header-text-color">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive">
+                                <h5 class="accordion-title fw-bold header-text-color">Who can use Tivro Africa?
+                                </h5>
+
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-content-color text-start pt-0">
+                                Tivro Africa is designed for a wide range of users in the property ecosystem, including
+                                property managers, landlords, property lawyers, housing agents, landowners, and sublet
+                                owners. It is also beneficial for tenants seeking to verify the authenticity and safety
+                                of the property they intend to rent.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 mt-0" data-aos="fade-up">
+                <a href="faq.html" class="text-primary fw-bold text-center text-decoration-none">
+                    <p class="fw-normal text-primary h6"> See more</p>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Mobile Menu Modal -->
+        <div class="modal fade" id="mobileMenuModal" tabindex="-1" aria-labelledby="mobileMenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <img src="images/logo-black.svg" alt="Tivro Logo" height="35">
+                        <div class="">
+                            <img src="images/icons/menu-close.svg" aria-label="Close" width="40" height="40"
+                                data-bs-dismiss="modal" class=" " style="cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <nav class="mobile-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="index.html"
+                                        class="text-dark text-decoration-none h5 d-block mb-4 active-mobile-menu">Home</a>
+                                </li>
+                                <li><a href="about.html" class="text-dark text-decoration-none h5 d-block mb-4">About
+                                        Us</a></li>
+                                <!-- Mobile Dropdown Menu -->
+                                <li class="dropdown text-center">
+                                    <a href="#" class="text-dark text-decoration-none h5 d-block mb-4 dropdown-toggle "
+                                        id="mobileDropdown">
+                                        Our Services <i class="bi bi-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu text-center" id="mobileDropdownMenu">
+                                        <li><a href="tivinspect.html"
+                                                class="dropdown-item text-dark text-decoration-none h6 d-block  mb-2">TivInspect</a>
+                                        </li>
+                                        <li><a href="tivgent.html"
+                                                class="dropdown-item text-dark text-decoration-none h6 d-block mb-2">TivGent</a>
+                                        </li>
+                                        <li><a href="tivro-ai.html"
+                                                class="dropdown-item text-dark text-decoration-none h6 d-block mb-2">Tivro
+                                                AI</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="careers.html"
+                                        class="text-dark text-decoration-none h5 d-block mb-4">Careers</a></li>
+                                <!-- <li><a href="partners.html" class="text-dark text-decoration-none h5 d-block mb-4">Tivro
+                                        Partners</a></li> -->
+                                <!-- <li><a href="tivro-ai.html" class="text-dark text-decoration-none h5 d-block mb-4">Tivro
+                                        AI</a></li> -->
+                                <li><a href="contact.html"
+                                        class="text-dark text-decoration-none h5 d-block mb-4">Contact</a></li>
+                            </ul>
+
+                            <div class="mobile-menu-buttons mt-5 pt-4">
+                                <a href="/login"
+                                    class="btn btn-light rounded-pill lg w-100 mb-3 ">Login</a>
+                                <a href="/register"
+                                    class="btn btn-primary rounded-pill lg w-100 mb-3">Sign Up</a>
+                            </div>
+
+                            <div>
+                                <a href="https://docs.google.com/forms/d/1ldRP32qnvLvhwLR5K5tU_nPlGCc6cTdShejKBa7seMg/viewform?edit_requested=true"
+                                    target="_blank" class="text-dark text-decoration-none">
+                                    <p>Apply as <span class="text-primary text-decoration-underline">Partner</span></p>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container">
+        <footer class="footer text-white py-4 py-md-5">
+            <div class="container px-4 p-3">
+                <div class="row g-5">
+                    <!-- Brand Column -->
+                    <div class="col-12 col-lg-4 d-none d-lg-block">
+                        <a href="/" class="d-inline-block mb-4">
+                            <img src="images/logo.svg" alt="Tivro" height="40">
+                        </a>
+                        <p class="text-white footer-compnay-intro">Tivro bridges the gap between landlords and tenants
+                            with
+                            seamless
+                            verification and trusted property inspection, ensuring secure and efficient rental process.
+                        </p>
+                    </div>
+
+                    <!-- Brand Mobile -->
+                    <div class="col-12 col-lg-2  d-lg-none text-center">
+                        <a href="/" class="d-inline-block ">
+                            <img src="images/logo.svg" alt="Tivro" height="40">
+                        </a>
+
+                    </div>
+
+                    <!-- Pages Column -->
+                    <div class="col-12 col-lg-2 mobile-footer-link">
+                        <h6 class="menu-title text-white mb-3">Pages</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item-footer  py-2"><a href="index.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1 active">Home</a></li>
+                            <li class="nav-item-footer py-2"><a href="about.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">About Us</a></li>
+                            <li class="nav-item-footer py-2"><a href="careers.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Career</a></li>
+                            <li class="nav-item-footer py-2"><a href="contact.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Product Column -->
+                    <div class="col-12 col-lg-2 mobile-footer-link">
+                        <h6 class="menu-title text-white mb-3">Product</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item-footer py-2"><a href="tivinspect.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivInspect</a></li>
+                            <li class="nav-item-footer py-2"><a href="tivgent.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivGent</a></li>
+                            <li class="nav-item-footer py-2"><a href="tivro-ai.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Tivro AI <span
+                                        class="badge-pill bg-primary rounded-5 py-1 px-2 text-white"
+                                        style="font-size: 8px;">Coming soon</span></a> </li>
+                            <li class="nav-item-footer py-2"><a href="/register"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivSecure </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal Column -->
+                    <div class="col-12 col-lg-2 mobile-footer-link">
+                        <h6 class="menu-title text-white mb-3">Legal</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item-footer py-2"><a href="privacy-policy.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Privacy</a></li>
+                            <li class="nav-item-footer py-2"><a href="gdpr.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">GDPR</a></li>
+                            <li class="nav-item-footer py-2"><a href="terms.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Terms & Conditions</a>
+                            </li>
+                            <li class="nav-item-footer py-2"><a href="cookies.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Cookies</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Socials Column -->
+                    <div class="col-12  col-lg-2 mobile-footer-link">
+                        <h6 class="menu-title text-white mb-3 d-none d-lg-block">Socials</h6>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/people/Tivro-Africa/61571922944686/" target="_blank"
+                                class="me-3 text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/UseTivroAfrica" target="_blank"
+                                class="me-3 text-decoration-none"><img src="images/icons/x.svg" alt="x" width="14"
+                                    height="14" /></a>
+                            <a href="https://www.instagram.com/tivroafrica/" target="_blank"
+                                class="me-3 text-decoration-none"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@tivroafrica" target="_blank"
+                                class="me-3 text-decoration-none"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.linkedin.com/company/tivro-africa/" target="_blank"
+                                class="me-3 text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="social-links mt-3 d-flex justify-content-center">
+                            <img src="images/compliance-image.webp" alt="whatsapp" width="80" height="80" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom border-top border-secondary mt-4 pt-4 ">
+                    <p class="text-white mb-0 footer-compnay-intro">© A product of Urello Technologies Limited - 1787613
+                    </p>
+                </div>
+            </div>
+            <!-- Cookie Consent Banner -->
+            <div id="cookieBanner" class="position-fixed bottom-0 end-0 p-3 " data-aos="fade-up"
+                style="z-index: 1050; display: none;">
+                <div class="toast show bg-light shadow-lg border-0 p-3" role="alert" aria-live="assertive"
+                    aria-atomic="true">
+                    <div class="toast-body py-3">
+                        <!-- Cookie Icon and Text -->
+                        <div class="d-flex align-items-center">
+                            <p class="mb-2 flex-grow-1 text-black fw-normal" style="font-size: 16px;">We use cookies to
+                                enhance your experience. By continuing, you agree to our
+                                <a href="cookies.html" class="text-primary text-decoration-none">cookie policy</a>.
+                            </p>
+                        </div>
+
+                        <!-- Buttons (Aligned Left) -->
+                        <div class="d-flex gap-2 py-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-5 me-2"
+                                id="closeBanner">Close</button>
+                            <button type="button" class="btn btn-sm btn-primary rounded-5"
+                                id="acceptCookies">Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/desktopMenu.js"></script>
+
+</body>
+
+</html>

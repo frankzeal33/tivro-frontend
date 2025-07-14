@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tivro </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="preload" as="image" href="images/conatct-us-hero.webp" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="canonical" href="https://tivro.africa/contact" />
+    <meta name="description" content="Have a question or need support? We are just a message away. Fill out the form below, and one of our team members will get back to you as soon as possible." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="Tivro" />
+    <meta property="og:title" content="Contact Us - Tivro" />
+    <meta property="og:description" content="Have a question or need support? We are just a message away. Fill out the form below, and one of our team members will get back to you as soon as possible." />
+    <meta property="og:url" content="https://tivro.africa/contact" />
+    <meta property="og:image" content="https:tivro.africa/images/conatct-us-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us - Tivro" />
+    <meta name="twitter:description" content="Have a question or need support? We are just a message away. Fill out the form below, and one of our team members will get back to you as soon as possible." />
+    <meta name="twitter:image" content="https://tivro.africa/images/conatct-us-hero.webp" />
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+        <div class="container px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-black.svg" alt="Tivro Logo">
+            </a>
+            <div class="d-lg-none">
+                <img src="images/icons/menu-open-black.svg" width="35" height="35" data-bs-toggle="modal"
+                    data-bs-target="#mobileMenuModal" class="menu-open" style="cursor: pointer;">
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black " href="about.html">About Tivro</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li class="nav-item"><a class="dropdown-item nav-link text-black" href="tivinspect.html">TivInspect</a>
+                            </li>
+                            <li class="nav-item"><a class="dropdown-item nav-link text-black" href="tivgent.html">TivGent</a></li>
+                            <li class="nav-item"><a class="dropdown-item nav-link text-black "
+                                    href="tivro-ai.html">Tivro AI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="careers.html">Careers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-black" href="partners.html">Tivro Partners</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-black" href="tivro-ai.html">Tivro AI</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-black active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons d-flex gap-3">
+                    <a href="/login" class="btn btn-link text-black">Login</a>
+                    <a href="/register" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Page Tile-->
+    <section class="about-subheader bg-light">
+        <div class="mt-lg-4">
+            <div class="custom-height position-relative d-flex align-items-center justify-content-center text-center text-white"
+                style="background: url('images/conatct-us-hero.webp') center/cover no-repeat;">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0);">
+                </div>
+                <h1 class="position-relative fw-bold display-4">Contact Us</h1>
+            </div>
+        </div>
+    </section>
+
+    <!--Let's Stay Connected -->
+    <section class="py-5">
+        <div class="py-md-5">
+            <div class="container text-center col-md-9 py-lg-5">
+                <p class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal">WHAT WE DO
+                </p>
+                <h2 class="fw-bold text-black">Let’s Stay Connected</h2>
+                <p class="text-muted mb-5 ">
+                    Have a question or need support? We are just a message away. Fill out the form below, and one of our
+                    team
+                    members will get back to you as soon as possible.
+                </p>
+
+                <form class="container text-center px-2 py-4 p-5  px-md-4 py-md-3 col-lg-10" id="contactForm"
+                    method="POST">
+                    <div class="row g-4">
+                        <!-- First Name -->
+                        <div class="col-12 col-md-6 text-start">
+                            <label for="firstName" class="form-label fw-semibold text-muted">First name</label>
+                            <input type="text" class="form-control p-3 rounded-4 bg-light border-1" id="firstName"
+                                name="first_name" placeholder="Enter your first name" required>
+                        </div>
+                        <!-- Last Name -->
+                        <div class="col-12 col-md-6 text-start">
+                            <label for="lastName" class="form-label fw-semibold text-muted">Last name</label>
+                            <input type="text" class="form-control p-3 rounded-4 bg-light border-1" id="lastName"
+                                name="last_name" placeholder="Enter your last name" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-12 col-md-6 text-start">
+                            <label for="email" class="form-label fw-semibold text-muted">Email</label>
+                            <input type="email" class="form-control p-3 rounded-4 bg-light border-1" id="email"
+                                name="email" placeholder="Enter your email" required>
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="col-12 col-md-6 text-start">
+                            <label for="phoneNumber" class="form-label fw-semibold text-muted">Phone number</label>
+                            <input type="tel" class="form-control p-3 rounded-4 bg-light border-1" id="phoneNumber"
+                                name="phone_number" placeholder="Enter your phone number" required>
+                        </div>
+                        <!-- Message -->
+                        <div class="col-12 text-start">
+                            <label for="message" class="form-label fw-semibold text-muted">Message</label>
+                            <textarea class="form-control p-3 rounded-4 bg-light border-1" id="message" name="message"
+                                rows="8" placeholder="Type your message..."></textarea>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-4 mt-3"
+                                id="submitBtn">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- Success Alert (Floating at the Bottom Center) -->
+        <div id="successAlert" class="alert alert-success bg-primary alert-dismissible fade show text-white"
+            role="alert"
+            style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1050; width: auto; display: none;">
+            <strong class="text-white">Success!</strong> Your message has been sent successfully.
+            <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Error Alert (Floating at the Bottom Center) -->
+        <div id="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert"
+            style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1050; width: auto; display: none;">
+            <strong>Error!</strong> Something went wrong. Please try again later.
+            <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section bg-light py-4 py-md-5 ">
+        <div class="container px-4 text-center p-5">
+            <span class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-2 py-2 mb-2 fw-normal"
+                data-aos="fade-up">FAQ</span>
+            <h2 class="text-center mb-2 text-black fw-bold" data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="mb-5 text-center text-black fw-normal" data-aos="fade-up">
+                Tivro is here to make your life easier and foster tenant-landlord connection.
+            </p>
+            <div class="accordion col-lg-8 mx-auto py-2" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item shadow-sm shadow-sm " data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+
+                            <h5 class="accordion-title fw-bold header-text-color">What is Tivro Africa?</h5>
+                        </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-content-color text-start pt-0">
+                                Tivro Africa is a comprehensive platform designed to serve the needs of both property
+                                owners and tenants by providing reliable verification services. It helps property
+                                managers, landlords, and homeowners verify the authenticity of renters and subletters.
+                                Likewise, tenants can use Tivro Africa to verify the legitimacy and condition of
+                                apartments or properties before signing a lease. This two-way verification system
+                                ensures security and transparency, minimising the risks of fraud for all involved
+                                parties.
+                            </div>
+                        </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="accordion-header header-text-color">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo">
+                            <h5 class="accordion-title fw-bold header-text-color">How does Tivro Africa work?</h5>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-content-color text-start pt-0">
+                            Tivro Africa operates through an efficient and thorough verification process tailored to both property owners and tenants. For property owners, Tivro Africa allows you to submit a potential tenant’s details, and our platform runs background checks on their credit history, and financial standing leveraging the use of our technological algorithms. For tenants, Tivro Africa helps ensure the property you’re interested in is legitimate by verifying the property’s legal status, the landlord's authenticity, and the property’s overall condition. This dual approach protects both tenants and landlords from fraudulent activities.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="accordion-header header-text-color">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree">
+                            <h5 class="accordion-title fw-bold header-text-color"> Is Tivro Africa available in my
+                                country?
+                            </h5>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-content-color text-start pt-0">
+                            Tivro Africa is currently available in Nigeria, Ghana, and Kenya, with plans for expansion
+                            into additional African markets. We are committed to increasing accessibility and building
+                            trust across the rental market in Africa.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                    <h2 class="accordion-header header-text-color">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour">
+                            <h5 class="accordion-title fw-bold header-text-color">Is Tivro Africa an app or a website?
+                            </h5>
+
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-content-color text-start pt-0">
+                            At present, Tivro Africa operates as a web-based platform that you can access via a secure
+                            URL. While the platform is currently available as a website, we are exploring the
+                            possibility of launching a mobile app in the near future to further enhance accessibility
+                            and user experience.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                    <h2 class="accordion-header header-text-color">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive">
+                            <h5 class="accordion-title fw-bold header-text-color">Who can use Tivro Africa?
+                            </h5>
+
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-content-color text-start pt-0">
+                            Tivro Africa is designed for a wide range of users in the property ecosystem, including
+                            property managers, landlords, property lawyers, housing agents, landowners, and sublet
+                            owners. It is also beneficial for tenants seeking to verify the authenticity and safety of
+                            the property they intend to rent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5" data-aos="fade-up">
+            <a href="faq.html" class="text-primary fw-bold text-center text-decoration-none">
+                <p class="fw-normal text-primary h6"> See more</p>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Mobile Menu Modal -->
+    <div class="modal fade" id="mobileMenuModal" tabindex="-1" aria-labelledby="mobileMenuModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <img src="images/logo-black.svg" alt="Tivro Logo" height="35">
+                    <div class="">
+                        <img src="images/icons/menu-close.svg" aria-label="Close" width="40" height="40"
+                            data-bs-dismiss="modal" class=" " style="cursor: pointer;">
+                    </div>
+
+                </div>
+                <div class="modal-body text-center">
+                    <nav class="mobile-menu">
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-dark text-decoration-none h5 d-block mb-4 ">Home</a>
+                            </li>
+                            <li><a href="about.html" class="text-dark text-decoration-none h5 d-block mb-4  ">About
+                                    Us</a>
+                            </li>
+                            <!-- Mobile Dropdown Menu -->
+                            <li class="dropdown text-center">
+                                <a href="#" class="text-dark text-decoration-none h5 d-block mb-4 dropdown-toggle "
+                                    id="mobileDropdown">
+                                    Our Services <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu text-center" id="mobileDropdownMenu">
+                                    <li><a href="tivinspect.html"
+                                            class="dropdown-item text-dark text-decoration-none h6 d-block  mb-2">TivInspect</a>
+                                    </li>
+                                    <li><a href="tivgent.html"
+                                            class="dropdown-item text-dark text-decoration-none h6 d-block mb-2">TivGent</a>
+                                    </li>
+                                    <li><a href="tivro-ai.html"
+                                            class="dropdown-item text-dark text-decoration-none h6 d-block mb-2">Tivro
+                                            AI3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="careers.html"
+                                    class="text-dark text-decoration-none h5 d-block mb-4">Careers</a></li>
+                            <!-- <li><a href="partners.html" class="text-dark text-decoration-none h5 d-block mb-4">Tivro
+                                    Partners</a></li>
+                            <li><a href="tivro-ai.html" class="text-dark text-decoration-none h5 d-block mb-4">Tivro
+                                    AI</a></li> -->
+                            <li><a href="contact.html"
+                                    class="text-dark text-decoration-none h5 d-block mb-4 active-mobile-menu">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="mobile-menu-buttons mt-5 pt-4">
+                            <a href="/login" class="btn btn-light rounded-pill lg w-100 mb-3 ">Login</a>
+                            <a href="/register" class="btn btn-primary rounded-pill lg w-100 mb-3">Sign Up</a>
+                        </div>
+                        <div>
+                            <a href="https://docs.google.com/forms/d/1ldRP32qnvLvhwLR5K5tU_nPlGCc6cTdShejKBa7seMg/viewform?edit_requested=true" target="_blank" class="text-dark text-decoration-none">
+                                <p>Apply as <span class="text-primary text-decoration-underline">Partner</span></p>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-4 py-md-5 ">
+        <div class="container px-4 p-3">
+            <div class="row g-5">
+                <!-- Brand Column -->
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                    <a href="/" class="d-inline-block mb-4">
+                        <img src="images/logo.svg" alt="Tivro" height="40">
+                    </a>
+                    <p class="text-white footer-compnay-intro">Tivro bridges the gap between landlords and tenants with
+                        seamless
+                        verification and trusted property inspection, ensuring secure and efficient rental process.</p>
+                </div>
+
+                <!-- Brand Mobile -->
+                <div class="col-12 col-lg-2  d-lg-none text-center">
+                    <a href="/" class="d-inline-block ">
+                        <img src="images/logo.svg" alt="Tivro" height="40">
+                    </a>
+                </div>
+
+                <!-- Pages Column -->
+                <div class="col-12 col-lg-2 mobile-footer-link">
+                    <h6 class="menu-title text-white mb-3">Pages</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-footer  py-2"><a href="index.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1 ">Home</a></li>
+                        <li class="nav-item-footer py-2"><a href="about.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1 ">About Us</a></li>
+                        <li class="nav-item-footer py-2"><a href="careers.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1">Career</a></li>
+                        <li class="nav-item-footer py-2"><a href="contact.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1 active">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                    <!-- Product Column -->
+                    <div class="col-12 col-lg-2 mobile-footer-link">
+                        <h6 class="menu-title text-white mb-3">Product</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item-footer py-2"><a href="tivinspect.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivInspect</a></li>
+                            <li class="nav-item-footer py-2"><a href="tivgent.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivGent</a></li>
+                            <li class="nav-item-footer py-2"><a href="tivro-ai.html"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">Tivro AI <span
+                                        class="badge-pill bg-primary rounded-5 py-1 px-2 text-white"
+                                        style="font-size: 8px;">Coming soon</span></a> </li>
+                            <li class="nav-item-footer py-2"><a href="/register"
+                                    class="nav-link-footer text-white text-decoration-none pt-1">TivSecure </a></li>
+                        </ul>
+                    </div>
+
+                <!-- Legal Column -->
+                <div class="col-12 col-lg-2 mobile-footer-link">
+                    <h6 class="menu-title text-white mb-3">Legal</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-footer py-2"><a href="privacy-policy.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1">Privacy</a></li>
+                        <li class="nav-item-footer py-2"><a href="gdpr.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1">GDPR</a></li>
+                        <li class="nav-item-footer py-2"><a href="terms.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1">Terms & Conditions</a>
+                        </li>
+                        <li class="nav-item-footer py-2"><a href="cookies.html"
+                                class="nav-link-footer text-white text-decoration-none pt-1">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials Column -->
+                <div class="col-12  col-lg-2 mobile-footer-link">
+                    <h6 class="menu-title text-white mb-3 d-none d-lg-block">Socials</h6>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/Tivro-Africa/61571922944686/" target="_blank"
+                            class="me-3 text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/UseTivroAfrica" target="_blank" class="me-3 text-decoration-none"><img
+                                src="images/icons/x.svg" alt="x" width="14" height="14" /></a>
+                        <a href="https://www.instagram.com/tivroafrica/" target="_blank"
+                            class="me-3 text-decoration-none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@tivroafrica" target="_blank"
+                            class="me-3 text-decoration-none"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/company/tivro-africa/" target="_blank"
+                            class="me-3 text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="social-links mt-3 d-flex justify-content-center">
+                        <img src="images/compliance-image.webp" alt="whatsapp" width="80" height="80" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom border-top border-secondary mt-4 pt-4 ">
+                <p class="text-white mb-0 footer-compnay-intro">© A product of Urello Technologies Limited - 1787613</p>
+            </div>
+        </div>
+        <!-- Cookie Consent Banner -->
+        <div id="cookieBanner" class="position-fixed bottom-0 end-0 p-3 " data-aos="fade-up"
+            style="z-index: 1050; display: none;">
+            <div class="toast show bg-light shadow-lg border-0 p-3" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="toast-body py-3">
+                    <!-- Cookie Icon and Text -->
+                    <div class="d-flex align-items-center">
+                        <p class="mb-2 flex-grow-1 text-black fw-normal" style="font-size: 16px;">We use cookies to
+                            enhance your experience. By continuing, you agree to our
+                            <a href="cookies.html" class="text-primary text-decoration-none">cookie policy</a>.
+                        </p>
+                    </div>
+
+                    <!-- Buttons (Aligned Left) -->
+                    <div class="d-flex gap-2 py-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-5 me-2"
+                            id="closeBanner">Close</button>
+                        <button type="button" class="btn btn-sm btn-primary rounded-5"
+                            id="acceptCookies">Accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Cookie Consent Banner -->
+        <div id="cookieBanner" class="position-fixed bottom-0 end-0 p-3 " data-aos="fade-up"
+            style="z-index: 1050; display: none;">
+            <div class="toast show bg-light shadow-lg border-0 p-3" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="toast-body py-3">
+                    <!-- Cookie Icon and Text -->
+                    <div class="d-flex align-items-center">
+                        <p class="mb-2 flex-grow-1 text-black fw-normal" style="font-size: 16px;">We use cookies to
+                            enhance your experience. By continuing, you agree to our
+                            <a href="cookies.html" class="text-primary text-decoration-none">cookie policy</a>.
+                        </p>
+                    </div>
+
+                    <!-- Buttons (Aligned Left) -->
+                    <div class="d-flex gap-2 py-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-5 me-2"
+                            id="closeBanner">Close</button>
+                        <button type="button" class="btn btn-sm btn-primary rounded-5"
+                            id="acceptCookies">Accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/function.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/email.js"></script>
+<script src="assets/js/cookies.js"></script>
+<script src="assets/js/mobileMenu.js"></script>
+<script src="assets/js/desktopMenu.js"></script>
+
+</html>
