@@ -13,6 +13,7 @@
     <link href="assets/css/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tivro.africa/submit-inspection-request" />
     <meta name="description" content="Fill out all required fields to get started with TivInspect" />
@@ -123,7 +124,7 @@
                         <!-- Phone Number -->
                         <div class="col-12 col-md-6 text-start">
                             <label for="phoneNumber" class="form-label fw-semibold text-muted">Phone number <span class="text-danger">*</span></label>
-                            <input type="tel" class="form-control p-3 rounded-4 bg-light border-1" id="phoneNumber"
+                            <input type="number" class="form-control p-3 rounded-4 bg-light border-1" id="phoneNumber"
                                 name="phone_number" placeholder="Enter your phone number" required>
                         </div>
                         <!-- Email -->
@@ -144,7 +145,7 @@
                             <label for="propertyLocation" class="form-label fw-semibold text-muted">Property Location <span class="text-danger">*</span></label>
                             <select class="form-select p-3 rounded-4 bg-light border-1" id="propertyLocation" name="property_location" required>
                                 <option value="" selected disabled>Select Property Location</option>
-                                <option value="Mainland">Mainland</option>
+                                <option value="mainland">Mainland</option>
                                 <option value="island">Island</option>
                               </select>
                         </div>
@@ -177,8 +178,9 @@
                         </div>
                         <!-- Submit Button -->
                         <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-4 mt-3"
-                                id="submit-sir-Btn">Next</button>
+                            <button type="button" class="btn btn-primary btn-lg px-5 py-3 rounded-4 mt-3" id="submit-inspect">
+                                Next
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -398,7 +400,30 @@
             </div>
         </div>
     </footer>
-</body>
+
+    <!-- confirm modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold text-black" id="exampleModalLongTitle">Confirm Inspection</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted">You will pay ₦<span id="amount"></span> for this inspection</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" id="inspection-payment">
+                    <span id="next">Pay</span>
+                    <span id="spinner" class="inspection-loader d-none"></span>
+                </button>
+            </div>
+            </div>
+        </div>
+    </div>
+
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/function.js"></script>
@@ -406,5 +431,167 @@
 <script src="assets/js/cookies.js"></script>
 <script src="assets/js/mobileMenu.js"></script>
 <script src="assets/js/desktopMenu.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
+ <script>
+
+    const notyf = new Notyf({
+        position: {
+            x: 'right',
+            y: 'top',
+        },
+        duration: 3000,
+        dismissible: true,
+    });
+
+    async function fetchAmount() {
+        try {
+        const response = await axios.get('https://9jatext.com.ng/api/v1/inspection/amount/');
+
+        return response.data?.inspection_charge || 0;
+
+      } catch (error) {
+        return error.response.data?.message || 0;
+      }
+
+    }
+
+    async function updateAmountDisplay() {
+        const amount = await fetchAmount(); // Call the async function
+        document.getElementById("amount").textContent = amount.toLocaleString(); // e.g., "7,500"
+    }
+
+    // Call on page load
+    updateAmountDisplay();
+
+    const openModal = () => {
+        const myModal = new bootstrap.Modal(document.getElementById('exampleModalCenter'));
+        myModal.show();
+    }
+
+    document.getElementById('submit-inspect').addEventListener('click', async function (e) {
+
+      e.preventDefault()
+
+      const fullname = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phoneNumber').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('propertyAddress').value.trim();
+      const location = document.getElementById('propertyLocation').value.trim();
+      const property_type = document.getElementById('propertyType').value.trim();
+      const link = document.getElementById('ads-link').value.trim();
+      const landlord_contact = document.getElementById('Landlord_contact').value.trim();
+    
+      const spinner = document.getElementById('spinner');
+      const next = document.getElementById('next');
+
+      if (!fullname) {
+        notyf.error('Fullname is required');
+        return;
+      }
+
+      if (!phone) {
+        notyf.error('Phone number is required');
+        return;
+      }
+
+      if (!email) {
+        notyf.error('Email is required');
+        return;
+      }
+
+      if (!address) {
+        notyf.error('Property Address is required');
+        return;
+      }
+
+       if (!location) {
+        notyf.error('Select property location');
+        return;
+      }
+
+       openModal()
+      
+    });
+
+    document.getElementById('pay').addEventListener('click', async function (e) {
+
+      e.preventDefault()
+
+      const fullname = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phoneNumber').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('propertyAddress').value.trim();
+      const location = document.getElementById('propertyLocation').value.trim();
+      const property_type = document.getElementById('propertyType').value.trim();
+      const link = document.getElementById('ads-link').value.trim();
+      const landlord_contact = document.getElementById('Landlord_contact').value.trim();
+    
+      const spinner = document.getElementById('spinner');
+      const next = document.getElementById('next');
+
+      if (!fullname) {
+        notyf.error('Fullname is required');
+        return;
+      }
+
+      if (!phone) {
+        notyf.error('Phone number is required');
+        return;
+      }
+
+      if (!email) {
+        notyf.error('Email is required');
+        return;
+      }
+
+      if (!address) {
+        notyf.error('Property Address is required');
+        return;
+      }
+
+       if (!location) {
+        notyf.error('Select property location');
+        return;
+      }
+
+      spinner.classList.remove('d-none'); // Show spinner
+        this.setAttribute('disabled', true); // Disable button
+        next.classList.add('d-none');
+
+      try {
+        const response = await axios.post('https://9jatext.com.ng/api/v1/payments/inspections', {
+          fullname,
+          phone,
+          email,
+          address,
+          location,
+          property_type,
+          link,
+          landlord_contact
+        });
+
+        const paymentLink = response.data?.payment?.link;
+        if (paymentLink) {
+            window.location.href = paymentLink;
+        } else {
+            toast.error("No payment link received");
+        }
+
+        
+
+      } catch (error) {
+        notyf.error(error.response.data?.message || 'There was an error submitting this form. Contact Support');
+      } finally {
+        // spinner.classList.add('d-none'); // Hide spinner
+        // this.removeAttribute('disabled'); // Re-enable button
+        // next.classList.remove('d-none');
+      }
+      
+    });
+
+  </script>
+
+</body>
 </html>

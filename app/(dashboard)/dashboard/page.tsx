@@ -73,6 +73,7 @@ type verificationType = {
   employment_check: string;
   status: string;
   date: string;
+  created_at: string;
 }[]
 
 type plansType = {
@@ -748,7 +749,7 @@ export default function Page() {
                           <TableRow key={index}>
                             <TableCell className="font-medium capitalize">
                               #{ReduceTextLength(request?.request_id, 8)}
-                              <p className="text-muted-foreground text-xs">{DateLabels(request?.date)}</p>
+                              <p className="text-muted-foreground text-xs">{DateLabels(request?.date || request?.created_at)}</p>
                             </TableCell>
                             <TableCell className='capitalize'>
                               <div className="flex items-center">

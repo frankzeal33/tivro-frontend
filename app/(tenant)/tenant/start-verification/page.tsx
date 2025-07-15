@@ -14,6 +14,7 @@ import { Progress } from "@/components/ui/progress"
 import { useGlobalContext } from "@/context/GlobalContext"
 import { useTenantStore } from "@/store/TenantStore"
 import { useRouter } from "next/navigation"
+import { axiosClient } from "@/GlobalApi"
 
 const sections = [
     {
@@ -65,10 +66,26 @@ const Page = () => {
   const router = useRouter()
   const tenantInfo = useTenantStore((state) => state.tenantInfo)
 
+  const [inspectionAmount, setInspectionAmount] = useState(0)
+
+   const getInspectionAmount = async () => {
+  
+      try {
+      
+        const response = await axiosClient.get(`/inspection/amount/`)
+        setInspectionAmount(response.data?.inspection_charge || 0)
+
+      } catch (error: any) {
+          
+      }
+  }
+
   useEffect(() => {
     if(!tenantInfo?.user_token){
       router.replace("/")
     }
+
+    getInspectionAmount()
   }, [])
 
   const renderStages = () => {
@@ -82,7 +99,7 @@ const Page = () => {
       case "employment-check":
         return <EmploymentCheck />;
       case "verify-apartment":
-        return <VerifyApartment />;
+        return <VerifyApartment inspectionAmount={inspectionAmount}/>;
       case "certificates":
         return <Certificates />;
     }

@@ -14,8 +14,9 @@ import { FormEvent, useState } from "react"
 import { useTenantStore } from "@/store/TenantStore"
 import { toast } from "react-toastify"
 import { axiosClient } from "@/GlobalApi"
+import displayCurrency from "@/utils/displayCurrency"
 
-const  VerifyApartment = () => {
+const  VerifyApartment = ({inspectionAmount}: {inspectionAmount: number}) => {
 
   const {
     setCurrentSection,
@@ -111,7 +112,7 @@ return (
                         <div className="space-y-3">
                           <h4>Inspection service</h4>
                           <p className="text-xs text-muted-foreground">Are you too busy to inspect the apartment? Let us handle it for you! We'll provide a detailed report within 48 hours.</p>
-                          <p className="text-xs text-muted-foreground">Inspection fee: <span className="text-primary font-bold">₦10,000</span></p>
+                          <p className="text-xs text-muted-foreground">Inspection fee: <span className="text-primary font-bold">{displayCurrency(Number(inspectionAmount), "NGN")}</span></p>
                           <Button variant={'outline'} type="button" onClick={pay} className="bg-light" loading={loadingPayment} disabled={loadingPayment}>{loadingPayment ? "Loading..." : "Yes, proceed"}</Button>
                         </div>
                         <div className="hidden lg:flex">
