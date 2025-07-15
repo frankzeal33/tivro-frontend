@@ -42,6 +42,9 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { z } from 'zod'
+
+const emailSchema = z.string().email("Invalid email address");
 
 const Page = () => {
 
@@ -70,17 +73,38 @@ const Page = () => {
         } 
     }
 
+    const getManagerEmail = async () => {
+        
+        try {
+          
+          const response = await axiosClient.get(`/get/line_manager/email/?token=${token}`)
+          setEmail(response.data?.email || "")
+    
+        } catch (error: any) {
+          toast.error(error.response?.data?.message);
+        }
+    }
+
     useEffect(() => {
         getCert()
+        getManagerEmail()
     }, [token])
 
     const resend = async () => {
         try {
         
+            const result = emailSchema.safeParse(email);
+
+            if (!result.success) {
+                const message = result.error.errors[0]?.message || "Invalid Email";
+                return toast.error(message) 
+            }
+            
             setResending(true)
             
-            const response = await axiosClient.post(`/resend/line_manager/email/?token=${token}`,)
+            const response = await axiosClient.post(`/resend/line_manager/email/?token=${token}&email=${email}`,)
             toast.success(response.data?.message)
+            setOpen(false)
 
         } catch (error: any) {
             toast.error(error.response?.data?.message);
