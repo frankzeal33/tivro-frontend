@@ -84,7 +84,9 @@ export function LoginForm({
 
         setIsSubmitting(true)
         
-        const response = await axiosClient.post("/login/", form)
+        const response = await axiosClient.post("/login/", form, {
+          withCredentials: true,
+        })
         toast.success(response.data.message);
 
         userInfo({
