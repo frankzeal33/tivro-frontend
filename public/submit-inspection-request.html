@@ -415,7 +415,7 @@
                 <p class="text-muted">You will pay ₦<span id="amount"></span> for this inspection</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn" id="inspection-payment">
+                <button type="button" class="btn inspection-btn" id="inspection-payment">
                     <span id="next">Pay</span>
                     <span id="spinner" class="inspection-loader d-none"></span>
                 </button>
@@ -515,7 +515,7 @@
       
     });
 
-    document.getElementById('pay').addEventListener('click', async function (e) {
+    document.getElementById('inspection-payment').addEventListener('click', async function (e) {
 
       e.preventDefault()
 

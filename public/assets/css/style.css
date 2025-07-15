@@ -1068,7 +1068,7 @@ a.nav-link-footer:hover {
     }
 } 
 
-#inspection-payment {
+.inspection-btn {
     background-color: #EC5F34;
     color: #ffffff;
     border-width: 0px;
