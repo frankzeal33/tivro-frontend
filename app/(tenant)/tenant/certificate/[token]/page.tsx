@@ -1,6 +1,6 @@
 "use client"
 import { Button } from '@/components/ui/button'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, X } from 'lucide-react'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { BsFillLightningChargeFill } from 'react-icons/bs'
@@ -29,12 +29,28 @@ import SkeletonFull from '@/components/SkeletonFull'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { DownloadStatus } from '@/components/DownloadStatus'
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger
+} from "@/components/ui/alert-dialog"
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 
 const Page = () => {
 
     const params = useParams();
     const token = params?.token;
     const [loadingInfo, setLoadingInfo] = useState(false)
+    const [resending, setResending] = useState(false)
+    const [open, setOpen] = useState(false)
+    const [email, setEmail] = useState("")
     const [verification, setVerification] = useState<any>()
      const arrayList = new Array(2).fill(null)
 
@@ -57,6 +73,21 @@ const Page = () => {
     useEffect(() => {
         getCert()
     }, [token])
+
+    const resend = async () => {
+        try {
+        
+            setResending(true)
+            
+            const response = await axiosClient.post(`/resend/line_manager/email/?token=${token}`,)
+            toast.success(response.data?.message)
+
+        } catch (error: any) {
+            toast.error(error.response?.data?.message);
+        } finally {
+            setResending(false)
+        } 
+    }
 
     const generatePdf = () => {
         const input = document.getElementById('certificate') as HTMLElement | null;
@@ -89,6 +120,31 @@ const Page = () => {
                     <div>
                         <h2 className='font-bold text-2xl'>Issued certificate</h2>
                         <p className='text-muted-foreground'>{verification?.bio_data?.created_date ? format(new Date(verification?.bio_data?.created_date), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                        <AlertDialog open={open} onOpenChange={setOpen}>
+                            <AlertDialogTrigger asChild>
+                                <Button variant={'outline'} className='bg-light'>Resend Email to Line Manager</Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent className="rounded-2xl p-0 w-[300px] md:w-[400px] gap-0 max-h-[95%] overflow-y-auto">
+                                <form>
+                                    <AlertDialogHeader className="bg-background-light rounded-t-2xl p-4 flex flex-row items-center justify-between gap-2">
+                                        <AlertDialogTitle className="text-sm">Confirm Email</AlertDialogTitle>
+                                        <AlertDialogCancel className='bg-background-light border-0 shadow-none'><X className='text-2xl'/></AlertDialogCancel>
+                                    </AlertDialogHeader>
+                                    <AlertDialogDescription className="w-full bg-light px-4 py-4 flex flex-col items-center justify-center gap-3">
+                                        <span className='grid gap-2 w-full'>
+                                            <Label htmlFor="email" className='text-accent-foreground'>Line Manager Email address</Label>
+                                            <Input id="email" type="email" value={email} onChange={(e: any) => setEmail(e.target.value)} placeholder="Enter here" />
+                                        </span>
+                                        
+                                    </AlertDialogDescription>
+                                    <AlertDialogFooter className='flex items-center justify-center w-full gap-2 rounded-b-2xl bg-light border-t p-4'>
+                                        <Button loading={resending} disabled={resending} type="button" className='w-full' onClick={resend}>
+                                           {resending ? "Resending..." : "Resend"}
+                                        </Button>
+                                    </AlertDialogFooter>
+                                </form>
+                            </AlertDialogContent>
+                        </AlertDialog>
                     </div>
                     <Button className='w-fit' onClick={generatePdf}>
                         <BsFillLightningChargeFill size={26} className="text-primary-foreground"/>
@@ -145,7 +201,7 @@ const Page = () => {
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium leading-none">Date issued</p>
-                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.["created date"] ? format(new Date(verification?.bio_data?.["created date"]), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
+                                            <p className="text-sm text-muted-foreground">{verification?.bio_data?.created_date ? format(new Date(verification?.bio_data?.created_date), "dd MMM yyyy, hh:mm a") : "N/A"}</p>
                                         </div>
                                     </div>
                                 </div>
