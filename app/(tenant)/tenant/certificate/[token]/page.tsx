@@ -1,6 +1,6 @@
 "use client"
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, X } from 'lucide-react'
+import { ArrowLeft, Loader, Loader2, X } from 'lucide-react'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { BsFillLightningChargeFill } from 'react-icons/bs'
@@ -43,6 +43,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { z } from 'zod'
+import { Loading } from '@/components/Loading'
 
 const emailSchema = z.string().email("Invalid email address");
 
@@ -52,6 +53,7 @@ const Page = () => {
     const token = params?.token;
     const [loadingInfo, setLoadingInfo] = useState(false)
     const [resending, setResending] = useState(false)
+    const [loadingEmail, setLoadingEmail] = useState(false)
     const [open, setOpen] = useState(false)
     const [email, setEmail] = useState("")
     const [verification, setVerification] = useState<any>()
@@ -74,7 +76,9 @@ const Page = () => {
     }
 
     const getManagerEmail = async () => {
-        
+
+        setLoadingEmail(true)
+
         try {
           
           const response = await axiosClient.get(`/get/line_manager/email/?token=${token}`)
@@ -82,6 +86,8 @@ const Page = () => {
     
         } catch (error: any) {
           toast.error(error.response?.data?.message);
+        } finally {
+            setLoadingEmail(false)
         }
     }
 
@@ -155,10 +161,16 @@ const Page = () => {
                                         <AlertDialogCancel className='bg-background-light border-0 shadow-none'><X className='text-2xl'/></AlertDialogCancel>
                                     </AlertDialogHeader>
                                     <AlertDialogDescription className="w-full bg-light px-4 py-4 flex flex-col items-center justify-center gap-3">
-                                        <span className='grid gap-2 w-full'>
-                                            <Label htmlFor="email" className='text-accent-foreground'>Line Manager Email address</Label>
-                                            <Input id="email" type="email" value={email} onChange={(e: any) => setEmail(e.target.value)} placeholder="Enter here" />
-                                        </span>
+                                        {loadingEmail ? (
+                                            <span className="w-full flex justify-center items-center min-h-10">
+                                                <Loader2 className="animate-spin size-10 text-primary" />
+                                            </span>
+                                        ) : (
+                                            <span className='grid gap-2 w-full'>
+                                                <Label htmlFor="email" className='text-accent-foreground'>Line Manager Email address</Label>
+                                                <Input id="email" type="email" value={email} onChange={(e: any) => setEmail(e.target.value)} placeholder="Enter here" />
+                                            </span>
+                                        )}
                                         
                                     </AlertDialogDescription>
                                     <AlertDialogFooter className='flex items-center justify-center w-full gap-2 rounded-b-2xl bg-light border-t p-4'>
