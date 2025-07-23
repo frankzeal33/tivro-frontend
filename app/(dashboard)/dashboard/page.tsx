@@ -568,12 +568,16 @@ export default function Page() {
                                       </AlertDialogContent>
                                     </AlertDialog>
 
-                                  <div className="space-y-2">
-                                    {['One Verifications', 'Personality check provided','Work place checks provided', 'Credit score verifications provided', 'Employability checks provided'].map((feature, index) => (
-                                        <div key={index} className="flex gap-1 items-start">
+                                   <div className="space-y-2">
+                                      <div className="flex gap-1 items-start">
+                                          <FaCircleCheck className="text-primary"/>
+                                          <span className="text-xs">{item?.verifications_provided} Verifications</span>
+                                      </div>
+                                  {['Personality check provided','Work place checks provided', 'Credit score verifications provided', 'Employability checks provided'].map((feature, index) => (
+                                      <div key={index} className="flex gap-1 items-start">
                                           <FaCircleCheck className="text-primary"/>
                                           <span className="text-xs">{feature}</span>
-                                        </div>
+                                      </div>
                                       ))}
                                   </div>
 
@@ -663,6 +667,7 @@ export default function Page() {
                     <div className="bg-light p-4 shadow dark:border rounded-b-2xl">
                       <div>
                         <p className="mb-3 text-sm text-accent-foreground">{BVNDetails?.customer_phone}</p>
+                        {BVNDetails?.customer_email && <p className="mb-3 text-sm text-accent-foreground">{BVNDetails?.customer_email}</p>}
                         <div className="grid gap-2 mb-5">
                           <Label htmlFor="bvn">Enter the OTP</Label>
                           <Input id="bvn" type="number" value={BVNOTP} onChange={(e: any) => setBVNOTP(e.target.value)} placeholder="Enter OTP here" />

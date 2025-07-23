@@ -13,6 +13,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Rental Management Software for Landlords and Tenants in Africa – Tivro",
   description: "Your trustworthy partner in rental verification, effortlessly verifying tenants or properties to ensure peace of mind and empower confident, informed decisions.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

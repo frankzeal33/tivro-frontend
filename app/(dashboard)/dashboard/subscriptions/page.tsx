@@ -434,7 +434,11 @@ const Page = () => {
                                             </AlertDialog>
 
                                             <div className="space-y-2">
-                                            {['One Verifications', 'Personality check provided','Work place checks provided', 'Credit score verifications provided', 'Employability checks provided'].map((feature, index) => (
+                                                <div className="flex gap-1 items-start">
+                                                    <FaCircleCheck className="text-primary"/>
+                                                    <span className="text-xs">{item?.verifications_provided} Verifications</span>
+                                                </div>
+                                            {['Personality check provided','Work place checks provided', 'Credit score verifications provided', 'Employability checks provided'].map((feature, index) => (
                                                 <div key={index} className="flex gap-1 items-start">
                                                     <FaCircleCheck className="text-primary"/>
                                                     <span className="text-xs">{feature}</span>
