@@ -17,6 +17,7 @@ const VerifyTenantPayment = () => {
     msg: '',
     status: false
   })
+  const [inspectionAmount, setInspectionAmount] = useState(0)
   const searchParams = useSearchParams()
   
   const tenantInfo = useTenantStore((state) => state.tenantInfo)
@@ -37,6 +38,22 @@ const VerifyTenantPayment = () => {
             verifyPayment(orderId)
         }
     }, [searchParams])
+
+    useEffect(() => {
+        getInspectionAmount()
+    }, [])
+
+    const getInspectionAmount = async () => {
+    
+        try {
+        
+            const response = await axiosClient.get(`/inspection/amount/`)
+            setInspectionAmount(response.data?.inspection_charge || 0)
+
+        } catch (error: any) {
+            
+        }
+    }
 
     const verifyPayment = async (order_Id: string) => {
 
@@ -65,7 +82,7 @@ const VerifyTenantPayment = () => {
           const response = await axiosClient.post(`/apartment/verification/consent/?token=${tenantInfo?.user_token}&consent=yes`)
     
           const data = {
-            amount: 10,
+            amount: inspectionAmount,
             token: tenantInfo?.user_token
           }
           const result = await axiosClient.post("/payment/tenant/", data)

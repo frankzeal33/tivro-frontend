@@ -77,7 +77,7 @@ const  VerifyApartment = ({inspectionAmount}: {inspectionAmount: number}) => {
       const response = await axiosClient.post(`/apartment/verification/consent/?token=${tenantInfo?.user_token}&consent=yes`)
 
       const data = {
-        amount: 10,
+        amount: inspectionAmount,
         token: tenantInfo?.user_token
       }
       const result = await axiosClient.post("/payment/tenant/", data)
