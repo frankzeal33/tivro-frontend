@@ -28,8 +28,8 @@ export function LoginForm({
 
   
     const router = useRouter()
-     const [errors, setErrors] = useState<Partial<Record<keyof LoginFormValues, string>>>({})
-      const [touched, setTouched] = useState<Partial<Record<keyof LoginFormValues, boolean>>>({})
+    const [errors, setErrors] = useState<Partial<Record<keyof LoginFormValues, string>>>({})
+    const [touched, setTouched] = useState<Partial<Record<keyof LoginFormValues, boolean>>>({})
     const [form, setForm] = useState<LoginFormValues>({
       email: '',
       password: ''
@@ -105,11 +105,11 @@ export function LoginForm({
       } catch (error: any) {
         toast.error(error.response?.data?.error || error.response?.data?.message);
 
-        if(error.response.data.message === "Your account is not verified"){
+        if(error.response?.data?.message === "Your account is not verified"){
           try {
             const response = await axiosClient.post("/resend/token/", { email: form.email })
   
-            toast.success(response.data.message)
+            toast.success(response.data?.message)
             router.push(`/register/verify-email?email=${encodeURIComponent(form.email)}`)
           } catch (error: any) {
             toast.error(error.response?.data?.message)
